@@ -67,12 +67,13 @@ body {
   display: inline-block;
   float: right;
   border: 3px solid #ffffff;
-  border-radius: 50px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   margin: 100px 250px 0 600px;
-  height: 150px;
-  width: 150px;
+  height: 175px;
+  width: 175px;
+  line-height:50px;
   font-family: Arial, sans-serif;
   font-size: 40px;
   text-transform: uppercase;
@@ -82,8 +83,11 @@ body {
   transition: all 0.3s ease 0s;
 }
 
+
 .button:hover {
-  background-color: rgba(255,255,255,.25)
+  background-color: rgba(255,255,255,.25);
+  text-decoration: none;
+
 }
 
 .center {
@@ -267,8 +271,6 @@ body {
   margin: 0 10px 0 10px;
 }
 
-
-
 .resume .box {
   color: #46494C;
   font-size: 16px;
@@ -311,4 +313,73 @@ body {
 
 .projects {
   background-color: green;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* ============================================================
+  SECTIONS
+============================================================ */
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h2 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  padding: 40px 0;
+}
+section.module.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 600px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section.module.parallax-1 {
+  background-image: url("/static/images/jellyfish.jpeg");
+}
+section.module.parallax-2 {
+  background-image: url("/static/images/butterflies.jpg");
+}
+section.module.parallax-3 {
+  background-image: url("/static/images/weeds.jpg");
+}
+
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+  }
+  section.module.parallax h1 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 160px;
+  }
 }
