@@ -1,3 +1,4 @@
+import os
 #require 'flask' -how it would look in ruby
 from flask import Flask
 from flask import render_template
