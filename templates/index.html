@@ -7,6 +7,8 @@
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap.css') }}">
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='hover-min.css') }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src= "{{ url_for('static',filename='bootstrap.js') }}"></script>
   <!-- <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'> -->
 
@@ -28,7 +30,6 @@
   <nav class="navbar navbar-default">
     <div class="navbar-header">
       <h1><a href="/" class="hvr-float-shadow">Karen Hambro</a></h1>
-      <h3>full stack ruby developer</h3>
       <button class ="navbar-toggle collapsed" data-toggle="collapse" data-target=".menu-wrapper">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -53,17 +54,28 @@
     <div class="container">
       <h1>Hello!</h1>
       <h2>I'm a full stack ruby developer.</h2>
-      <h3>Check out my work:</h3>
+      <ul class="work">
+        <h3>
+          <li><a href= "mailto:khambro@gmail.com" class="hvr-float-shadow" ><i class="fa fa-envelope-square fa-lg"></i></a></li>
+          <li><a href= "https://www.linkedin.com/pub/karen-hambro/a/94b/349" class="hvr-float-shadow" ><i class="fa fa-linkedin fa-lg"></i></a></li>
+          <li><a href= "https://twitter.com/khambro?lang=en" class="hvr-float-shadow" ><i class="fa fa-twitter fa-lg"></i></a></li>
+          <li><a href= "https://github.com/khambro"class="hvr-float-shadow" ><i class="fa fa-github fa-lg"></i></a></li>
+        </h3>
+        </div>
+
+      </ul>
+
+
       <!-- <a class="button" href="mailto:khambro@gmail.com">let's talk!</a> -->
     </div>
   </section>
 
   <section class="module content">
-    <div class="container">
-        <h2>Me</h2>
-        <p>Hi! I'm Karen Hambro, a software developer in training at <a href="http://code.builders/">Code Builders</a>. I have worked in the tech industry for quite a few years, most recently with <a href='http://adadevelopersacademy.org/'>Ada Developers Academy</a>. Having worked to place over 60 women in software development roles in local tech companies, it's now my turn to build, create, and start down the path of my own adventures in programming.</p>
-
-      </div>
+    <div class="container me">
+        <h2>me</h2>
+        <p>I'm Karen Hambro, a software developer in training at <a href="http://code.builders/">Code Builders</a>. I have worked in the tech industry for quite a few years, most recently with <a href='http://adadevelopersacademy.org/'>Ada Developers Academy</a>. Having worked to place over 60 women in software development roles in local tech companies, it's now my turn to build, create, and start down the path of my own adventures in programming.</p>
+        <p>I spend my free time hanging out with my dogs, hanging out with other people's dogs, kayaking, brewing beer, taking photos, relaxing with friends and family, and dancing whenever possible.</p>
+    </div>
   </section>
 
   <section class="module parallax parallax-2">
@@ -73,14 +85,12 @@
   </section>
 
   <section class="module content">
-    <div class="container">
+    <div class="container projects">
         <h2>my projects</h2>
-        <div class="col-xs-6 col-sm-4 col-centered"><h3>{{ project }}</h3><p>For mastering the art of divying up the housework equally,"Who's taking out the trash?!", coming Winter, 2016."</p></div>
+        <div class="col-xs-6 col-sm-4 col-centered"><h3><a href="http://pollerbear.club/">{{ project }}</a></h3><p>PollerBear is a polling app that allows you to vote in polls, as well as create your own for others to vote in. Image upload permitted for multiple choice polls.</p></div>
         <div class="col-xs-6 col-sm-4 col-centered"><h3>{{ project2 }}</h3><p>"Yappy Trails", a dog vacationing app, allows you to plan vacations with your pooch where she's not only welcome to join, but encouraged!</p></div>
         <div class="clearfix visible-xs"></div>
         <div class="col-xs-6 col-sm-4 col-centered"><h3>{{ project3 }}</h3><p>"Babe, get me a cookie" allows you to send messages to your partner informing them to bring you a cookie without you even having to speak. They'll even be electronically thanked upon cookie delivery.</p></div>
-
-
     </div>
   </section>
 
@@ -90,42 +100,13 @@
     </div>
   </section>
 
-<h2>full stack ruby developer in training</h2>
   <section class="module content">
-    <div class="container">
-      <p>I spend my free time hanging out with my dogs, hanging out with other people's dogs, kayaking, brewing beer, taking photos, relaxing with friends and family, and dancing whenever possible.</p>
-
-      <p class= "fortune">
-        Your fortune for the day:
-        <div class= "fortunes">
-          <% f = FortuneCookie.new %>
-        <i class="fa fa-quote-left fa-lg"></i>  <%= f.fortune %><i class="fa fa-quote-right fa-lg"></i>
-        (refresh page for new fortune)
-        </div>
-      </p>
-
+    <div class="container skills">
+      <h2>skills</h2>
+      <p>I love solving problems and I love learning. Transitioning into a career in software development provides the opportunity to apply previous experience with new adventures in new technologies.</p>
     </div>
     </div>
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

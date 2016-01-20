@@ -5,15 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='hover-min.css') }}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script src="//d3js.org/d3.v3.min.js"></script>
 </head>
 <body>
 
 
   <nav class="navbar navbar-default">
-    <div class="container">
+
     <div class="navbar-header">
-      <h1><a href="/" class:"hvr-float-shadow">Karen Hambro</a></h1>
+      <h1><a href="/" class="hvr-float-shadow">Karen Hambro</a></h1>
       <button class ="navbar-toggle collapsed" data-toggle="collapse" data-target=".menu-wrapper">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -23,13 +25,93 @@
     <div class="menu-wrapper collapse navbar-collapse">
       <div class="navbar-menu navbar-right">
         <ul class="nav navbar-nav">
-          <li><a href="/resume" class:"hvr-float-shadow">Resume</a></li>
-          <li><a href="/contact" class:"hvr-float-shadow">Contact</a></li>
+          <li><a href="/resume" class="hvr-float-shadow">Resume</a></li>
+          <li><a href="/contact" class="hvr-float-shadow">Contact</a></li>
           <li><a href= "mailto:khambro@gmail.com" class="hvr-float-shadow" ><i class="fa fa-envelope-square fa-lg"></i></a></li>
           <li><a href= "https://www.linkedin.com/pub/karen-hambro/a/94b/349" class="hvr-float-shadow" ><i class="fa fa-linkedin fa-lg"></i></a></li>
           <li><a href= "https://twitter.com/khambro?lang=en" class="hvr-float-shadow" ><i class="fa fa-twitter fa-lg"></i></a></li>
           <li><a href= "https://github.com/khambro"class="hvr-float-shadow" ><i class="fa fa-github fa-lg"></i></a></li>
       </div>
     </div>
-    </div>
   </nav>
+<!-- <div>
+  <a class="button" href="mailto:khambro@gmail.com">let's talk!</a>
+</div> -->
+
+
+
+
+<script>
+
+var width = 960,
+    height = 500;
+
+var nodes = d3.range(200).map(function() { return {radius: Math.random() * 12 + 4}; }),
+    root = nodes[0],
+    color = d3.scale.category10();
+
+root.radius = 0;
+root.fixed = true;
+
+var force = d3.layout.force()
+    .gravity(0.05)
+    .charge(function(d, i) { return i ? 0 : -2000; })
+    .nodes(nodes)
+    .size([width, height]);
+
+force.start();
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+svg.selectAll("circle")
+    .data(nodes.slice(1))
+  .enter().append("circle")
+    .attr("r", function(d) { return d.radius; })
+    .style("fill", function(d, i) { return color(i % 3); });
+
+force.on("tick", function(e) {
+  var q = d3.geom.quadtree(nodes),
+      i = 0,
+      n = nodes.length;
+
+  while (++i < n) q.visit(collide(nodes[i]));
+
+  svg.selectAll("circle")
+      .attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; });
+});
+
+svg.on("mousemove", function() {
+  var p1 = d3.mouse(this);
+  root.px = p1[0];
+  root.py = p1[1];
+  force.resume();
+});
+
+function collide(node) {
+  var r = node.radius + 16,
+      nx1 = node.x - r,
+      nx2 = node.x + r,
+      ny1 = node.y - r,
+      ny2 = node.y + r;
+  return function(quad, x1, y1, x2, y2) {
+    if (quad.point && (quad.point !== node)) {
+      var x = node.x - quad.point.x,
+          y = node.y - quad.point.y,
+          l = Math.sqrt(x * x + y * y),
+          r = node.radius + quad.point.radius;
+      if (l < r) {
+        l = (l - r) / l * .5;
+        node.x -= x *= l;
+        node.y -= y *= l;
+        quad.point.x += x;
+        quad.point.y += y;
+      }
+    }
+    return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+  };
+}
+
+</script>
