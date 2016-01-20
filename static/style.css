@@ -10,6 +10,11 @@ body {
   text-decoration: none;
 }
 
+nav.navbar.navbar-default {
+  background-color: white;
+  border: none;
+}
+
 
 .upper h2 {
   float: right;
@@ -53,9 +58,7 @@ body {
 
 }
 
-.work a {
-  color: white;
-}
+
 
 
 .center h2 {
@@ -344,6 +347,10 @@ section.module.parallax h3 {
   font-weight: 700;
   text-align: center;
   /*text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);*/
+}
+
+.work a {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 
