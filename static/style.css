@@ -2,22 +2,22 @@ body {
   cursor: url("/static/images/paws.png"), auto;
 }
 
-.container {
+/*.container {
   background-color: rgba(245, 245, 245, 0.7);
   width: auto;
   height: 65px;
 
-}
+}*/
 
-.header {
+/*.header {
   display: inline-block;
   background-color: #FFFFFF;
   color: black;
   width: 100%;
   position: fixed;
-}
+}*/
 
-
+/*
 .container .header h1 {
   display: inline-block;
   float: left;
@@ -25,8 +25,8 @@ body {
   margin: 0 0 0 10px;
   color: black;
 
-}
-
+}*/
+/*
 .header h1 a {
   text-decoration: none;
   color: black;
@@ -36,7 +36,7 @@ body {
 
 .icons a{
   color: black;
-}
+}*/
 
 
 
@@ -46,7 +46,7 @@ body {
   color: black;
   font-size: 20px;
 }*/
-
+/*
 .upper {
   display: inline-block;
   background-image: image-url("karen_2.jpg");
@@ -55,7 +55,7 @@ body {
   background-size:cover;
   background-position:center;
   background-repeat: no-repeat;
-}
+}*/
 
 .upper h2 {
   float: right;
@@ -351,7 +351,27 @@ section.module.parallax {
 section.module.parallax h1 {
   color: rgba(255, 255, 255, 0.8);
   font-size: 48px;
-  line-height: 600px;
+  line-height: 300px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section.module.parallax h2 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 40px;
+  line-height: 100px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section.module.parallax h3 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  line-height: 100px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
