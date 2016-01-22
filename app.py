@@ -2,6 +2,7 @@ import os
 #require 'flask' -how it would look in ruby
 from flask import Flask
 from flask import render_template
+# from flask_mail impo
 
 app = Flask(__name__)
 #app is just a variable name. not referring to file name.
@@ -14,9 +15,13 @@ def home():
 def index():
     return render_template("index.html", project="PollerBear", project2="Yappy Trails", project3="Babe, Get Me a Cookie")
 
-@app.route("/contact")
+@app.route('/contact')
 def contact():
-    return render_template("contact.html")
+    return render_template('contact.html')
+
+# @app.route('/contact/send', methods=['POST'])
+# def send_email():
+
 
 @app.route("/resume")
 def resume():

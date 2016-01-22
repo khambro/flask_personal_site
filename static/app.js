@@ -14,39 +14,29 @@ var body = $(".body");
 //   $(this).hide();
 // });
 
-
-var timer;
-blink.mouseover(function() {
-  timer = setInterval(function(){
-      $(red).toggleClass("change-color");
-      $(orange).toggleClass("change-color-orange");
-      $(yellow).toggleClass("change-color-orange");
-      $(green).toggleClass("change-color-orange");
-      $(blue).toggleClass("change-color-orange");
-      $(indigo).toggleClass("change-color-orange");
-      $(violet).toggleClass("change-color-orange");
-    }, 1000   )
-
-});
-
-  button.mouseout(function() {
-    clearInterval(timer);
-
-  });
+setInterval(function(){
+    $(red).toggleClass("change-color");
+    $(orange).toggleClass("change-color-orange");
+    $(yellow).toggleClass("change-color-orange");
+    $(green).toggleClass("change-color-orange");
+    $(blue).toggleClass("change-color-orange");
+    $(indigo).toggleClass("change-color-orange");
+    $(violet).toggleClass("change-color-orange");
+  }, 1000   )
 
 
-  body.load(function() {
-    timer = setInterval(function(){
-        $(red).toggleClass("change-color");
-        $(orange).toggleClass("change-color-orange");
-        $(yellow).toggleClass("change-color-orange");
-        $(green).toggleClass("change-color-orange");
-        $(blue).toggleClass("change-color-orange");
-        $(indigo).toggleClass("change-color-orange");
-        $(violet).toggleClass("change-color-orange");
-      }, 1000   )
+// var timer;
+// blink.mouseover(function() {
+//
+// });
 
-  });
+  // button.mouseout(function() {
+  //   clearInterval(timer);
+  //
+  // });
+
+
+
 
 // button.mouseover(function() {
 //

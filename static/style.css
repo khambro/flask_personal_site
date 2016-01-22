@@ -1,11 +1,13 @@
-body {
-  cursor: url("/static/images/paws.png"), auto;
+a:visited {
+  color: purple !important;
 }
 
 
 .navbar-header h1 {
   margin: 5px 15px 15px 15px;
 }
+
+
 .navbar-header a:hover {
   text-decoration: none;
 }
@@ -44,38 +46,6 @@ nav.navbar.navbar-default {
 
 }
 
-.button a {
-  text-decoration: none;
-}
-
-.button:hover {
-  /*background-color:#001;
-  background-image: radial-gradient(white 15%, transparent 16%),
-  radial-gradient(white 15%, transparent 16%);
-  background-size:60px 60px;
-  background-position: 0 0, 30px 30px;*/
-  text-decoration: none;
-  color: red;
-  line-height:200px;
-  font-family: Arial, sans-serif;
-  font-size: 40px;
-  background:
-linear-gradient(324deg, #232927 4%,   transparent 4%) -70px 43px,
-linear-gradient( 36deg, #232927 4%,   transparent 4%) 30px 43px,
-linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 30px 43px,
-linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -70px 43px,
-linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -70px 23px,
-linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 30px 23px,
-
-linear-gradient(324deg, #232927 4%,   transparent 4%) -20px 93px,
-linear-gradient( 36deg, #232927 4%,   transparent 4%) 80px 93px,
-linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 80px 93px,
-linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -20px 93px,
-linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -20px 73px,
-linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 80px 73px;
-background-color: #232927;
-background-size: 100px 100px;
-}
 
 
 .center {
@@ -86,7 +56,6 @@ background-size: 100px 100px;
   background-position:center;
 
 }
-
 
 
 
@@ -262,36 +231,12 @@ background-size: 100px 100px;
   margin: 0 10px 0 10px;
 }
 
-.resume .box {
-  color: #46494C;
-  font-size: 16px;
-  background-color: rgba(249, 239, 245, 0.3);
-  // background-color: #f5f9f4;
-  text-align: left;
-  height: 1300px;
-  width: 1224px;
-  margin: 20px 100px 0 90px;
-  float: right;
+
+.me p{
+  max-width: 450px;
+  margin: 0 auto;
 }
 
-.resume h2 {
-  margin: 15px 0 0 40px;
-}
-.resume .box .deets {
-  padding: 40px;
-  text-align: justify;
-}
-
-.posts {
-  color: #46494C;
-  font-size: 16px;
-  background-color: rgba(249, 239, 245, 0.3);
-  text-align: left;
-  height: 1300px;
-  width: 1224px;
-  margin: 20px 100px 0 90px;
-  float: right;
-}
 
 .posts h2 {
   margin: 15px 0 0 0;
@@ -306,9 +251,36 @@ background-size: 100px 100px;
   text-align: center;
 }
 
+.projects h3 {
+  text-align: left;
+}
+
+.projects p {
+  text-align: left;
+}
+
+
 .skills h2 {
   text-align: center;
 }
+
+.skills p {
+  width: 425px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.skills li {
+  display: inline-block;
+  list-style: none;
+  margin: 40px;
+  width: 200px;
+  padding: 0;
+  /*font-size: 20px;
+  margin: 0 auto;
+  text-align: left;*/
+}
+
 
 .me h2 {
   text-align: center;
@@ -368,8 +340,7 @@ section.module.parallax h2 {
 }
 
 section.module.parallax h3 {
-  display: inline-block;
-  width: 800px;
+  display: block;
   color: rgba(255, 255, 255, 0.8);
   font-size: 30px;
   line-height: 50px;
@@ -423,7 +394,7 @@ section.module.parallax-3 {
 
 
 .box1 {
-  margin: 100px 300px 0 600px;
+  margin: 100px 300px 0px 600px;
   width: 300px;
   display: inline-block;
 }
@@ -530,7 +501,35 @@ section.module.parallax-3 {
   text-align: center;
 }
 
+
+
 /*.change-color {
   background-color: green;
   transition: background-color 2000ms linear;
 }*/
+
+
+/*------------------resume----------------*/
+
+
+.resume .box {
+  color: #46494C;
+  font-size: 16px;
+  background-color: rgba(249, 239, 245, 0.3);
+  text-align: left;
+  height: auto;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.resume h2 {
+  margin: 0 0 0 130px;
+  padding-top: 45px;
+}
+
+.resume .box .deets {
+  padding: 30px;
+  width: 800px;
+  text-align: justify;
+  margin: 0 auto;
+}
