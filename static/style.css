@@ -29,25 +29,54 @@ nav.navbar.navbar-default {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  margin: 100px 250px 0 600px;
-  height: 175px;
-  width: 175px;
-  line-height:50px;
+  margin: 100px 100px 100px 100px;
+  height: 275px;
+  width: 275px;
+  line-height:200px;
   font-family: Arial, sans-serif;
   font-size: 40px;
   text-transform: uppercase;
-  color: #111111;
+  color: #ffffff;
   text-decoration: none;
   text-align: center;
+  background-color: #111111;
   transition: all 0.3s ease 0s;
+
 }
 
+.button a {
+  text-decoration: none;
+}
 
 .button:hover {
-  background-color: rgba(255,255,255,.25);
+  /*background-color:#001;
+  background-image: radial-gradient(white 15%, transparent 16%),
+  radial-gradient(white 15%, transparent 16%);
+  background-size:60px 60px;
+  background-position: 0 0, 30px 30px;*/
   text-decoration: none;
+  color: red;
+  line-height:200px;
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  background:
+linear-gradient(324deg, #232927 4%,   transparent 4%) -70px 43px,
+linear-gradient( 36deg, #232927 4%,   transparent 4%) 30px 43px,
+linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 30px 43px,
+linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -70px 43px,
+linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -70px 23px,
+linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 30px 23px,
 
+linear-gradient(324deg, #232927 4%,   transparent 4%) -20px 93px,
+linear-gradient( 36deg, #232927 4%,   transparent 4%) 80px 93px,
+linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 80px 93px,
+linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -20px 93px,
+linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -20px 73px,
+linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 80px 73px;
+background-color: #232927;
+background-size: 100px 100px;
 }
+
 
 .center {
   display: inline-block;
@@ -179,8 +208,8 @@ nav.navbar.navbar-default {
 
 .boxes {
   width: 700px;
-  height: 1000px;
-  margin: 20px 90px 0 0;
+  height: 100px;
+  margin: 10px 0 10px 0;
   display: inline-block;
   float: right;
 }
@@ -388,3 +417,120 @@ section.module.parallax-3 {
     font-size: 160px;
   }
 }
+
+
+/*---------------------contact page ------------------*/
+
+
+.box1 {
+  margin: 100px 300px 0 600px;
+  width: 300px;
+  display: inline-block;
+}
+
+.box2 {
+  margin: 0 300px 0 600px;
+  width: 300px;
+  display: inline-block;
+}
+
+.box2 h2 {
+  margin-bottom: 40px;
+  text-decoration: none;
+  margin-right: 100px;
+}
+
+.box2 a:hover {
+  text-decoration: none;
+}
+
+.red {
+  border-radius: 50%;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  transition: background-color 500ms linear;
+  margin: 0;
+  padding: 0;
+}
+
+.orange {
+  border-radius: 50%;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: orange;
+  margin: 0;
+  padding: 0;
+}
+
+.yellow {
+  border-radius: 50%;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: yellow;
+  margin: 0;
+  padding: 0;
+}
+
+.green {
+  border-radius: 50%;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  margin: 0;
+  padding: 0;
+}
+
+.blue {
+  border-radius: 50%;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: blue;
+  margin: 0;
+  padding: 0;
+}
+
+.indigo {
+  border-radius: 50%;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: indigo;
+  margin: 0;
+  padding: 0;
+}
+
+.violet {
+  border-radius: 50%;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: violet;
+  margin: 0;
+  padding: 0;
+}
+
+
+.change-color {
+  background-color: green;
+  transition: background-color 500ms linear;
+}
+
+.change-color-orange {
+  background-color: green;
+  transition: background-color 500ms linear;
+}
+
+.blink {
+  text-align: center;
+}
+
+/*.change-color {
+  background-color: green;
+  transition: background-color 2000ms linear;
+}*/
