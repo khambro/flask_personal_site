@@ -8,11 +8,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html", project="PollerBear", project2="Yappy Trails", project3="Babe, get me a cookie")
+    return render_template("index.html", project="PollerBear", project2="Yappy Trails", project3="Babe, Get Me a Cookie")
 
 @app.route("/me")
 def index():
-    return render_template("index.html", project="PollerBear", project2="Yappy Trails", project3="Babe, get me a cookie")
+    return render_template("index.html", project="PollerBear", project2="Yappy Trails", project3="Babe, Get Me a Cookie")
 
 @app.route("/contact")
 def contact():
