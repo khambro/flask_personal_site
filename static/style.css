@@ -505,29 +505,12 @@ section.module.parallax-3 {
 /*------------------resume----------------*/
 
 
-
-
-  section.module p {
-    font-size: 20px;
-  }
-  section.module.parallax h1 {
-    font-size: 96px;
-  }
-}
-@media (min-width: 960px) {
-  section.module.parallax h1 {
-    font-size: 160px;
-  }
-}*/
-
 .resume .box {
   color: #46494C;
   font-size: 16px;
   background-color: rgba(249, 239, 245, 0.3);
   text-align: left;
   height: auto;
-
-
 }
 
 .resume h2 {
