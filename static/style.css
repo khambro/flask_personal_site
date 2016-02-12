@@ -2,11 +2,9 @@ a:visited {
   color: purple !important;
 }
 
-
 .navbar-header h1 {
   margin: 5px 15px 15px 15px;
 }
-
 
 .navbar-header a:hover {
   text-decoration: none;
@@ -400,13 +398,8 @@ section.module.parallax-3 {
 
 .box1 h2 {
   margin: 30px 0 40px 30px;
-
 }
 
-
-/*.box2 a:hover {
-  text-decoration: none;
-}*/
 
 .red {
   border-radius: 50%;
@@ -520,7 +513,5 @@ section.module.parallax-3 {
 
 .resume .box .deets {
   padding: 30px;
-
   text-align: justify;
-
 }
