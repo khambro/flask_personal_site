@@ -3,6 +3,6 @@
 Getting started
 ____________________________
 
-Every time I run this app I need to run:
+To open locally:
 
 . venv/bin/activate
